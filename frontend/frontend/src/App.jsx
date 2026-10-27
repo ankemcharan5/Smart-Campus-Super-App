@@ -10,7 +10,7 @@ import Landing from "./pages/Landing";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import NotFound from "./pages/NotFound";
-
+import StudentFees from "./pages/student/Fees";   
 import StudentLayout from "./layouts/StudentLayout";
 import StudentDashboard from "./pages/student/Dashboard";
 import StudentAssignments from "./pages/student/Assignments";
@@ -23,7 +23,7 @@ import StudentLostFound from "./pages/student/LostFound";
 import StudentNotices from "./pages/student/Notices";
 import StudentProfile from "./pages/student/Profile";
 import StudentTimetable from "./pages/student/Timetable";
-import StudentFees from "./pages/student/Fees";
+
 import StudentResources from "./pages/student/Resources";
 import StudentNotifications from "./pages/student/Notifications";
 import StudentAIAssistant from "./pages/student/AIAssistant";
