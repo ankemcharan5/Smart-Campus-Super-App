@@ -62,10 +62,10 @@ function App() {
           <Route path="/student/attendance" element={<StudentAttendance />} />
           <Route path="/student/exams" element={<StudentExams />} />
           <Route path="/student/timetable" element={<StudentTimetable />} />
-          <Route path="/student/fees" element={<StudentFees />} />
+          <Route path="/student/Fees" element={<StudentFees />} />
           <Route path="/student/notices" element={<StudentNotices />} />
           <Route path="/student/events" element={<StudentEvents />} />
-          <Route path="/student/resources" element={<StudentResources />} />
+          <Route path="/student/resources" element={<StudentResources />} />  
           <Route path="/student/complaints" element={<StudentComplaints />} />
           <Route path="/student/lost-found" element={<StudentLostFound />} />
           <Route path="/student/clubs" element={<StudentClubs />} />
