@@ -10,7 +10,7 @@ import Landing from "./pages/Landing";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import NotFound from "./pages/NotFound";
-import StudentFees from "./pages/student/Fees";   
+import StudentFees from "./pages/student/Fees.jsx";  
 import StudentLayout from "./layouts/StudentLayout";
 import StudentDashboard from "./pages/student/Dashboard";
 import StudentAssignments from "./pages/student/Assignments";
