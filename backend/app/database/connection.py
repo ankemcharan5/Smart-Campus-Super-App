@@ -1,17 +1,19 @@
 import os
+from pathlib import Path
 
 from dotenv import load_dotenv
 from pymongo import MongoClient
 
 
 load_dotenv(override=True)
+_backend_env = Path(__file__).resolve().parent.parent.parent / ".env"
+if _backend_env.exists():
+    load_dotenv(dotenv_path=_backend_env, override=False)
+
 
 MONGO_URI = os.getenv("MONGO_URI")
 
-DATABASE_NAME = os.getenv(
-    "DATABASE_NAME",
-    "smart_campus"
-)
+DATABASE_NAME = os.getenv("DATABASE_NAME") or os.getenv("DB_NAME") or "smart_campus"
 
 if not MONGO_URI:
     raise ValueError("MONGO_URI is missing from .env")

@@ -1,12 +1,15 @@
 services:
   - type: web
     name: smart-campus-backend
-    env: python
+    runtime: python
+    rootDir: backend
     buildCommand: pip install -r requirements.txt
     startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
     envVars:
       - key: MONGO_URI
         sync: false
+      - key: DATABASE_NAME
+        value: smart_campus
       - key: DB_NAME
         value: smart_campus
       - key: JWT_SECRET
@@ -16,4 +19,6 @@ services:
       - key: ACCESS_TOKEN_EXPIRE_MINUTES
         value: "1440"
       - key: GEMINI_API_KEY
+        sync: false
+      - key: FRONTEND_URL
         sync: false

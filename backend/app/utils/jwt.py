@@ -1,3 +1,4 @@
+import os
 from datetime import datetime, timedelta, timezone
 
 from fastapi import Depends, HTTPException, status
@@ -9,9 +10,9 @@ from jose import JWTError, jwt
 # JWT CONFIGURATION
 # ============================================================
 
-SECRET_KEY = "smart-campus-super-app-secret-key-change-this"
-ALGORITHM = "HS256"
-ACCESS_TOKEN_EXPIRE_MINUTES = 60
+SECRET_KEY = os.getenv("JWT_SECRET", "smart-campus-super-app-secret-key-change-this")
+ALGORITHM = os.getenv("JWT_ALGORITHM", "HS256")
+ACCESS_TOKEN_EXPIRE_MINUTES = int(os.getenv("ACCESS_TOKEN_EXPIRE_MINUTES", "1440"))
 
 security = HTTPBearer()
 
